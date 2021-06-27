@@ -18,7 +18,7 @@
     <div class="card-body">
 
 	<div class="form-group">
-		<form action="login.php" method="post">
+		<form action="./controller/login.php" method="post">
 			<?php if (isset($_GET['error'])) { ?>
 				<div class="alert alert-warning alert-dismissible fade show" role="alert">
 				<p class="error"><?php echo $_GET['error']; ?></p>
