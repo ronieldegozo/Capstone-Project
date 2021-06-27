@@ -68,7 +68,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                 <i class="ti-settings text-primary"></i>
                 Settings
               </a>
-              <a class="dropdown-item" href="logout.php">
+              <a class="dropdown-item" data-toggle="modal" data-target="#logoutAdmin">
                 <i class="ti-power-off text-primary" ></i>
                Logout
               </a>
@@ -80,6 +80,29 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         </button>
       </div>
     </nav>
+
+
+          <!-- Logout Modal for Admin -->
+  <div class="modal fade" id="logoutAdmin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                  <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                  </button>
+              </div>
+              <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+              <div class="modal-footer">
+                  <a class="btn btn-primary" href="logout.php"  >Logout</a>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+
 
   <div class="container-scroller">
     <div class="container-fluid page-body-wrapper">
