@@ -36,7 +36,7 @@
     </li>
     <li class="nav-item nav-profile dropdown">
       <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-              Admin  <?php echo $_SESSION['name']; ?>
+              Admin  <?php echo $_SESSION['username']; ?>
       </a>
       <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
         <a class="dropdown-item">
