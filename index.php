@@ -69,7 +69,7 @@
         </button>
       </div>
       <div class="modal-body">
-          <form action="#" method="POST">
+          <form action="./student/index.php" method="POST">
  
             <div class="form-group">
               <label for="exampleInputEmail1"><strong>Email address</strong></label>
