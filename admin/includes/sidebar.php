@@ -17,8 +17,7 @@
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="./manage_student/index.php"> List of Student </a></li>
                 <li class="nav-item"> <a class="nav-link" href="pages/samples/login-2.html"> Email Student </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Update Student Record </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/register-2.html"> Register 2 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/register-2.html"> Add Student </a></li>
               </ul>
             </div>
           </li>

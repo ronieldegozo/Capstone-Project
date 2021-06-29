@@ -5,7 +5,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>CCS</title>
   <link href="./public/assets/img/neu.png" rel="icon">
- 
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -92,10 +92,9 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-		<h1 data-aos="fade-up">COLLEGE OF COMPUTER STUDIES</h1>
-          <h2 data-aos="fade-up" data-aos-delay="400">Course Evaluation System</h2> 
+		<h1 data-aos="fade-up">Monitoring Learning Outcome for student of BSIT and BSCS</h1>
           <div data-aos="fade-up" data-aos-delay="800">
-            <a href="register.php" class="btn-get-started scrollto">Reserve Slot</a>
+            <a href="register.php" class="btn-get-started scrollto">Register</a>
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left" data-aos-delay="200">
@@ -119,9 +118,8 @@
       <div class="row content">
         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
           <p class="unselectable" oncopy="return false" oncut="return false" onpaste="return false">
-           Web based system course assessment helps to interact with the 
-            student to help them to choose their career path or course that they will be fit. Some students in freshmen are
-             having difficulty in choosing the course or career they want.
+           Web based monitoring learning outcome helps student to 
+       receive their feedback about their performance and know the gaps wherein they are lack to enhance their learning capabilities.
           </p>
         </div>
         <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
@@ -188,7 +186,7 @@
     
             <div class="section-title" data-aos="fade-up">
               <h2>Services</h2>
-              <p>College of Computer Studies offered Courses</p>
+              <p>College of Computer Studies</p>
             </div>
     
           </div>
@@ -215,22 +213,6 @@
                 </div>
               </div>
   
-            </div>
-            <div class="col-md-6 d-flex align-items-stretch mt-4">
-              <div class="card" style='background-image: url("./public/assets/img/services/IS.jpg");' data-aos="fade-up" data-aos-delay="100">
-                <div class="card-body">
-                  <h5 class="card-title"><a href="#">Information System</a></h5>
-                  <p class="card-text"> is a unique field of study that draws upon elements of both computer science and business. To be an effective leader in technology today, you need to combine deep technical knowledge with sharp business strategy.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 d-flex align-items-stretch mt-4">
-              <div class="card" style='background-image: url("./public/assets/img/services/GD.jpg");' data-aos="fade-up" data-aos-delay="200">
-                <div class="card-body">
-                  <h5 class="card-title"><a href="#">Entertainment and Multimedia Computing major in Game Development</a></h5>
-                  <p class="card-text">is the art and science of creating games. It involves several phases which allow the game developers to create, program, and produce games based on their own ideas or concepts.</p>
-                </div>
-              </div>
             </div>
           </div>
   
