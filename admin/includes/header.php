@@ -15,4 +15,4 @@
 
   <link rel="shortcut icon" href="../public/assets/img/neu.png" />
 </head>
-<body>
+<body onload="startTime()">
