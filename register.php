@@ -1,3 +1,7 @@
+<?php
+    require_once 'controller/authController.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,36 +19,34 @@
         <div class="image-holder">
             <img src="./public/register/images/register.jpg" alt="">
         </div>
-        <form action="#" method="POST" class="mt-4">
+        <form action="register.php" method="POST" class="mt-4">
             <h3><strong>Student Registration Form</strong></h3>
-            <div class="form-wrapper">
-                <input  type="text"
-                id="fname"
-                name="fname"
-                class="form-control"
-                placeholder="First Name"/>
-            </div>
 
-            <div class="form-wrapper">
-                <input  type="text"
-                id="lname"
-                name="lname"
-                class="form-control"
-                placeholder="Last Name"/>
+<!-- //validation error -->
+            <?php if(count($errors) > 0): ?>
+            <div class="alert alert-danger">
+                <?php foreach($errors as $error): ?>
+                <li><?php echo $error?></li>
+                <?php endforeach; ?>
             </div>
+            <?php endif ?>
 
+
+        
             <div class="form-wrapper">
-              <input  type="number"
-              id="cnumber"
-              name="cnumber"
+              <input  type="text"
+              id="username"
+              name="username"
+              value="<?php echo $username; ?>"
               class="form-control"
-              placeholder="Contact Number"/>
+              placeholder="Enter Username"/>
           </div>
 
           <div class="form-wrapper">
             <input   type="email"
             id="email"
             name="email"
+            value="<?php echo $email; ?>"
             class="form-control"
             placeholder="Enter Email"/>
            </div>
@@ -56,7 +58,16 @@
                 class="form-control"
                 placeholder="Enter Password"/>
             </div>
-            <button type="submit">Register</button>
+
+            <div class="form-wrapper">
+                <input   type="password"
+                id="passwordConf"
+                name="passwordConf"
+                class="form-control"
+                placeholder="Confirm Password"/>
+            </div>
+
+            <button type="submit" name="signup-btn">Register</button>
             <div class="footer">
               <h5 class="mt-2">Have an account? <a href="index.php" style="text-decoration: none;" class="text-reset">Login here</a></h5>
             </div>
