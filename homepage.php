@@ -34,9 +34,22 @@ if(!isset($_SESSION['id'])) {
                 <a class="nav-link" href="index.html">
                     <span>Dashboard</span></a>
             </li>
+            <hr class="sidebar-divider d-none d-md-block">
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#">
                     <span>Exam Process</span>
+                </a>
+            </li>
+            <hr class="sidebar-divider d-none d-md-block">
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#">
+                    <span>Student Accuracy</span>
+                </a>
+            </li>
+            <hr class="sidebar-divider d-none d-md-block">
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#">
+                    <span>Download Performance</span>
                 </a>
             </li>
             <hr class="sidebar-divider d-none d-md-block">
