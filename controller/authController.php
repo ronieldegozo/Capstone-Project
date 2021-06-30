@@ -24,13 +24,13 @@ if(isset($_POST['signup-btn'])){
         $errors['username'] = 'Email address is invalid';
     }
     if(empty($email)){
-        $errors['email'] = 'email is Required';
+        $errors['email'] = 'Email is Required';
     }
     if(empty($password)){
-        $errors['password'] = 'password is Required';
+        $errors['password'] = 'Password is Required';
     }
     if($password !== $passwordConf){
-        $errors['password'] = 'Password not match';
+        $errors['password'] = 'Password do not Match';
     }
 
     $emailQuery = "SELECT * FROM users WHERE email =? LIMIT 1";
@@ -42,7 +42,7 @@ if(isset($_POST['signup-btn'])){
     $stmt->close();
 
     if($userCount > 0) {
-        $errors['email'] = 'Email is already exists';
+        $errors['email'] = 'Email is already registered';
     }
 
     if(count($errors) === 0) {
@@ -65,14 +65,13 @@ if(isset($_POST['signup-btn'])){
             //VERIFY THRU EMAIL
             sendVerificationEmail($email, $token);
 
-
             //flash message
             $_SESSION['message'] = "You are now login";
             $_SESSION['alert-class'] = "alert-success";
             header('Location: ./homepage.php');
             exit();
         }else{
-            $errors['db_error'] = 'Database error: failed to connect';
+            $errors['db_error'] = 'Database error: Failed to connect';
         }
  
     }
@@ -82,7 +81,7 @@ if(isset($_POST['signup-btn'])){
 //login click
 if(isset($_POST['login-btn'])){
     $username = $_POST['username'];
-    // $email = $_POST['email'];
+    $email = $_POST['email'];
     $password = $_POST['password'];
 
     if(empty($username)) {
@@ -98,13 +97,14 @@ if(isset($_POST['login-btn'])){
     $stmt->bind_param('ss', $username, $username);
     $stmt->execute();
     $result = $stmt->get_result();
-    $user = $result->fetch_assoc();
-    
+    $user = mysqli_fetch_assoc($result);
+    // $user = $result->fetch_assoc();
+
     if (password_verify($password, $user['password'])) {
             //login success
             $_SESSION['id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
-            // $_SESSION['email'] = $email['email'];
+            $_SESSION['email'] = $email['email'];
             $_SESSION['verified'] = $user['verified'];
 
                 //flash message
@@ -133,6 +133,36 @@ if(isset($_GET['logout'])) {
 
     header('Location: ./index.php');
     exit();
+}
+
+
+//verify user by tokens
+function verifyUser($token){
+    global $conn;
+    $sql = "SELECT * FROM users WHERE token='$token' LIMIT 1";
+    $result = mysqli_query($conn, $sql);
+
+    if(mysqli_num_rows($result) > 0) {
+        $user = mysqli_fetch_assoc($result);
+        $update_query = "UPDATE users SET verified = 1 WHERE token='$token'";
+
+        if(mysqli_query($conn, $update_query)){
+            //log usern in
+            
+            $_SESSION['id'] = $user['id'];
+            $_SESSION['username'] = $user['username'];
+            $_SESSION['email'] = $user['email'];
+            $_SESSION['verified'] = 1;
+
+                //flash message
+            $_SESSION['message'] = "Your email was successfully verified";
+            $_SESSION['alert-class'] = "alert-success";
+            header('Location: homepage.php');
+            exit();
+        }
+    }else{
+        echo 'User not Found';
+    }
 }
 
 

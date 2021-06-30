@@ -1,5 +1,9 @@
 <?php
 
+
+define('EMAIL', '');
+define('PASSWORD', '');
+
 $sname= "localhost";
 $unmae= "root";
 $password = "";

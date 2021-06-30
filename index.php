@@ -75,13 +75,15 @@
           <form action="index.php" method="POST">
   
   <!-- //validation error -->
+    <!-- register validation error -->
             <?php if(count($errors) > 0): ?>
-            <div class="alert alert-danger">
                 <?php foreach($errors as $error): ?>
-                <li><?php echo $error?></li>
-                <?php endforeach; ?>
+            <div class="alert alert-danger alert-dismissible fade show" type="button" class="close" data-dismiss="alert" aria-label="Close" style="    font-size: 12px;">
+                    <strong><?php echo $error?></strong>
             </div>
+            <?php endforeach; ?>
             <?php endif ?>
+
 
             <div class="form-group">
               <label for="exampleInputEmail1"><strong>Email address</strong></label>
