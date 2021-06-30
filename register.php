@@ -31,6 +31,38 @@
             <?php endforeach; ?>
             <?php endif ?>
 
+<!-- 
+            personal information -->
+
+            <div class="form-wrapper">
+              <input  type="text"
+              id="fname"
+              name="fname"
+              value="<?php echo $fname; ?>"
+              class="form-control"
+              placeholder="Enter Firstname"/>
+            </div>
+
+            <div class="form-wrapper">
+              <input  type="text"
+              id="lname"
+              name="lname"
+              value="<?php echo $lname; ?>"
+              class="form-control"
+              placeholder="Enter Lastname"/>
+            </div>
+
+            <div class="form-wrapper">
+              <input  type="text"
+              id="course"
+              name="course"
+              value="<?php echo $course; ?>"
+              class="form-control"
+              placeholder="Enter Course"/>
+            </div>
+
+
+<!--         User Account     -->
             <div class="form-wrapper">
               <input  type="text"
               id="username"
@@ -38,7 +70,7 @@
               value="<?php echo $username; ?>"
               class="form-control"
               placeholder="Enter Username"/>
-          </div>
+            </div>
 
           <div class="form-wrapper">
             <input   type="email"

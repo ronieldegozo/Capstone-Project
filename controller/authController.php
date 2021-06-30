@@ -8,15 +8,30 @@ require_once 'emailController.php';
 $errors = array();
 $username = "";
 $email = "";
+$fname = "";
+$lname = "";
+$course = "";
 
 //signup new student
 if(isset($_POST['signup-btn'])){
+    $fname = $_POST['fname'];
+    $lname = $_POST['lname'];
+    $course = $_POST['course'];
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
     $passwordConf = $_POST['passwordConf'];
 
 
+    if(empty($fname)){
+        $errors['fname'] = 'Firstname is Required';
+    }
+    if(empty($lname)){
+        $errors['lname'] = 'Lastname is Required';
+    }
+    if(empty($course)){
+        $errors['course'] = 'Course is Required';
+    }
     if(empty($username)){
         $errors['username'] = 'Username is Required';
     }
@@ -50,14 +65,17 @@ if(isset($_POST['signup-btn'])){
         $token = bin2hex(random_bytes(50));
         $verified = false;
 
-        $sql = "INSERT INTO users (username,email,verified,token,password) VALUES (?,?,?,?,?)";
+        $sql = "INSERT INTO users (fname,lname,course,username,email,verified,token,password) VALUES (?,?,?,?,?,?,?,?)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param('ssbss', $username,$email, $verified, $token, $password);
+        $stmt->bind_param('sssssbss', $fname, $lname, $course,$username,$email, $verified, $token, $password);
 
         if($stmt->execute()){
             //login
             $user_id = $conn->insert_id;
             $_SESSION['id'] = $user_id;
+            $_SESSION['fname'] = $fname;
+            $_SESSION['lname'] = $lname;
+            $_SESSION['course'] = $course;
             $_SESSION['username'] = $username;
             $_SESSION['email'] = $email;
             $_SESSION['verified'] = $verified;
