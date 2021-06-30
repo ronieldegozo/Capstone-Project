@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="../public/dashboard/vendors/ti-icons/css/themify-icons.css">
   <link rel="stylesheet" href="../public/dashboard/vendors/base/vendor.bundle.base.css">
   <link rel="stylesheet" href="../public/dashboard/css/style.css">
-
   <link rel="shortcut icon" href="../public/assets/img/neu.png" />
 </head>
 <body onload="startTime()">
