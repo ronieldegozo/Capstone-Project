@@ -2,7 +2,7 @@
 <?php 
 session_start();
 
-if (isset($_SESSION['student_accid']) && isset($_SESSION['username'])) {
+if (isset($_SESSION['admin_id']) && isset($_SESSION['username'])) {
 
  ?>
 

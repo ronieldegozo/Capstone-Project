@@ -29,7 +29,7 @@
 	
 			<?php } ?>
 			<label>Username</label>
-			<input type="text"class="form-control" name="uname" placeholder="User Name"><br>
+			<input type="text"class="form-control" name="username" placeholder="User Name"><br>
 
 			<label>Password</label>
 			<input type="password" class="form-control" name="password" placeholder="Password"><br>
