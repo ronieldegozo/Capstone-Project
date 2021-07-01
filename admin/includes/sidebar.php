@@ -33,8 +33,8 @@
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> List of Question </a></li>
                 <li class="nav-item"> <a class="nav-link" style="cursor:pointer" data-toggle="modal" data-target="#addquestion"> Add Question </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Update Question </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/register-2.html"> Delete Question </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Add Category </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Category List </a></li>
               </ul>
             </div>
           </li>
