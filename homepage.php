@@ -22,9 +22,9 @@ if(!isset($_SESSION['id'])) {
 
     <?php if($_SESSION['verified']): ?>
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="homepage.php">
                 <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
+                    <i class="fas ti-user"></i>
                 </div>
                 <div class="sidebar-brand-text mx-3">Welcome Student <?php echo $_SESSION['username']; ?> </div>
             </a>
@@ -32,23 +32,27 @@ if(!isset($_SESSION['id'])) {
                    <!-- IF STUDENT IS NOW VERIFIED -->
             <li class="nav-item active">
                 <a class="nav-link" href="index.html">
+                <i class="fas ti-dashboard"></i>
                     <span>Dashboard</span></a>
             </li>
             <hr class="sidebar-divider d-none d-md-block">
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#">
+                <i class="fas ti-reload"></i>
                     <span>Exam Process</span>
                 </a>
             </li>
             <hr class="sidebar-divider d-none d-md-block">
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#">
+                <i class="fas ti-write"></i>
                     <span>Student Accuracy</span>
                 </a>
             </li>
             <hr class="sidebar-divider d-none d-md-block">
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#">
+                <i class="fas ti-download"></i>
                     <span>Download Performance</span>
                 </a>
             </li>
@@ -86,7 +90,7 @@ if(!isset($_SESSION['id'])) {
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    <i class="fas ti-power-off fa-sm fa-fw mr-2 text-black-400"></i>
                                     Logout
                                 </a>
                             </div>

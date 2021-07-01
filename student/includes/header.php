@@ -8,5 +8,11 @@
     <link rel="stylesheet" href="./public/studentdashboard/css/style.css">
     <link rel="stylesheet" href="./public/studentdashboard/css/sb-admin-2.min.css">
     <link rel="stylesheet" href="./public/studentdashboard/css/all.min.css">
+
+    <link rel="stylesheet" href="./public/dashboard/vendors/ti-icons/css/themify-icons.css">
+
+
     <link rel="shortcut icon" href="./public/assets/img/neu.png" />
+
+    
 </head>
