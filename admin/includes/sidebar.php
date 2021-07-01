@@ -50,8 +50,6 @@
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> List of Admins </a></li>
                 <li class="nav-item"> <a class="nav-link" data-toggle="modal" data-target="#createadmin"> Register </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Update </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/register-2.html"> Delete </a></li>
               </ul>
             </div>
           </li>
